@@ -1,5 +1,6 @@
 package handy
 
-func Ignore() {
+//go:noinline
+func Recover() {
 	recover()
 }
