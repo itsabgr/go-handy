@@ -7,7 +7,7 @@ func Ref(value interface{}) uintptr {
 	return uintptr(unsafe.Pointer(&value))
 }
 
-//DeRef retuens the valie pointer points to
+//DeRef returns the value pointer points to
 func DeRef(ptr uintptr) interface{} {
 	return *((*interface{})(unsafe.Pointer(ptr)))
 }
