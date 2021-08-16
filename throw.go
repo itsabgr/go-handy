@@ -1,7 +1,8 @@
 package handy
 
-func Throw(errors ...interface{}) {
-	for _, error := range errors {
+//Throw panics if any of values is not nil
+func Throw(values ...interface{}) {
+	for _, error := range values {
 		if error != nil {
 			panic(error)
 		}
