@@ -5,7 +5,7 @@ import (
 )
 
 const MaxUint = ^uint(0)
-const MaxIny = int(MaxUint >> 1)
+const MaxInt = int(MaxUint >> 1)
 
 const UintptrSize = unsafe.Sizeof(uintptr(0))
 
