@@ -1,3 +1,3 @@
 package handy
 
-type Any interface{}
+type Any = interface{}
