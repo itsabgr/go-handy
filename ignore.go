@@ -1,6 +1,6 @@
 package handy
 
-//Ignore ignores crash if program panics
+//Ignore ignores panics
 //go:noinline
 func Ignore() {
 	recover()
