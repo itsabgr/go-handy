@@ -11,3 +11,10 @@ func ZeroTime() *time.Time {
 func IsZeroTime(aTime *time.Time) bool {
 	return time.Time{} == *aTime
 }
+
+//Time is a nullable time
+type Time struct {
+	Time time.Time
+	//IsFill is true when is not nil
+	IsFill bool
+}
