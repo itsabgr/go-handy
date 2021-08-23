@@ -14,7 +14,7 @@ func IsZeroTime(aTime *time.Time) bool {
 
 //Time is a nullable time
 type Time struct {
-	Time time.Time
+	time.Time
 	//IsFill is true when is not nil
 	IsFill bool
 }
