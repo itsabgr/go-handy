@@ -1,9 +1,9 @@
 package handy
 
-//Catch call fn with recovered value is its not nil
-func Catch(fn func(recovered interface{})) {
+//Catch call fn with recovered value is it's not nil
+func Catch[T any](fn func(recovered T)) {
 	recovered := recover()
 	if recovered != nil {
-		fn(recovered)
+		fn(Cast[T](recovered))
 	}
 }

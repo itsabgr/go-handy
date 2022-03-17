@@ -2,8 +2,8 @@ package handy
 
 import "fmt"
 
-//Cast casts any type to interface{}
-func Cast[T any](t T) interface{} {
+//Cast [T any] casts interface{} to T
+func Cast[T any](t interface{}) T {
 	switch t.(type) {
 	case T:
 		return t.(T)
