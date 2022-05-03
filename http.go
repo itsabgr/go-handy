@@ -13,8 +13,10 @@ func HTTP(ctx context.Context, method string, uri *fasthttp.URI, body io.Reader,
 	req.SetURI(uri)
 	req.SetBodyStream(body, -1)
 	req.Header.SetMethod(method)
-	for k, v := range headers {
-		req.Header.Set(k, v)
+	if headers != nil {
+		for k, v := range headers {
+			req.Header.Set(k, v)
+		}
 	}
 	//
 	res := fasthttp.AcquireResponse()
