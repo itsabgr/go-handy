@@ -6,9 +6,9 @@ import "errors"
 var ErrAssertion = errors.New("assertion")
 
 //Assert panic WhatWillPanic for ErrAssertion if value is false
-func Assert(value bool, WhatWillPanic interface{}) {
+func Assert(value bool, WhatWillPanic ...interface{}) {
 	if !value {
-		if WhatWillPanic == nil {
+		if len(WhatWillPanic) == 0 || WhatWillPanic[0] == nil {
 			panic(ErrAssertion)
 		}
 		panic(WhatWillPanic)
