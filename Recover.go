@@ -1,6 +1,6 @@
 package handy
 
 //go:noinline
-func Recover() interface{} {
-	return recover()
+func Recover[T any]() T {
+	return Cast[T](recover())
 }
