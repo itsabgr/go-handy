@@ -8,5 +8,5 @@ func Cast[T any](t interface{}) T {
 	case T:
 		return t.(T)
 	}
-	panic(fmt.Errorf("unsupported type %T", t))
+	panic(fmt.Errorf("unexpected type %T", t))
 }
