@@ -1,8 +1,8 @@
 package handy
 
-//Recover call fn and recover a panic and returns recovered value
+//Box call fn and recover a panic and returns recovered value
 //go:noinline
-func Recover(fn func()) (recovered interface{}) {
+func Box(fn func()) (recovered interface{}) {
 	defer func() {
 		recovered = recover()
 	}()
