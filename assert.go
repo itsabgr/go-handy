@@ -11,6 +11,6 @@ func Assert(value bool, WhatWillPanic ...interface{}) {
 		if len(WhatWillPanic) == 0 || WhatWillPanic[0] == nil {
 			panic(ErrAssertion)
 		}
-		panic(WhatWillPanic)
+		panic(WhatWillPanic[0])
 	}
 }
