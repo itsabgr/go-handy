@@ -8,7 +8,7 @@ func MustMarshalBinary(value encoding.BinaryMarshaler) []byte {
 	return b
 }
 
-func MustMarshalText(value encoding.TextMarshaler) string {
+func MustMarshalText(value encoding.TextMarshaler) []byte {
 	txt, err := value.MarshalText()
 	Throw(err)
 	return txt
